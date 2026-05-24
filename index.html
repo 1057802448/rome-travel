@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🇮🇹 奈梅亨 → 罗马 | 6.2 – 6.7 旅行行程</title>
+<meta property="og:title" content="🇮🇹 奈梅亨 → 罗马 · 6.2–6.7">
+<meta property="og:description" content="从荷兰到意大利，六天五晚永恒之城假期。斗兽场、梵蒂冈、博尔盖塞、意大利美食…">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="从荷兰奈梅亨出发，经阿姆斯特丹飞往罗马。6月2日至7日，六天五晚的永恒之城深度行程——斗兽场、梵蒂冈、博尔盖塞美术馆、地道意大利美食。">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+  :root {
+    --terracotta: #c06845;
+    --terracotta-light: #e8926a;
+    --gold: #c9a84c;
+    --gold-light: #e8d08f;
+    --olive: #7a8b5c;
+    --olive-dark: #4a5338;
+    --cream: #faf7f2;
+    --parchment: #f3ede3;
+    --ink: #2c2416;
+    --ink-light: #5c4a2e;
+    --sky: #8db6ce;
+    --sky-dark: #4a7c9b;
+    --roman-red: #8b1a1a;
+    --card-shadow: 0 1px 3px rgba(44,36,22,0.06), 0 8px 32px rgba(44,36,22,0.08);
+    --card-hover: 0 1px 3px rgba(44,36,22,0.08), 0 16px 48px rgba(44,36,22,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      linear-gradient(170deg, rgba(44,36,22,0.65) 0%, rgba(44,36,22,0.3) 40%, rgba(139,26,26,0.25) 70%, rgba(201,168,76,0.35) 100%),
+      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%23c06845"/><stop offset="30%" stop-color="%238db6ce"/><stop offset="60%" stop-color="%237a8b5c"/><stop offset="100%" stop-color="%23c9a84c"/></linearGradient></defs><rect width="1200" height="800" fill="url(%23g)" opacity="0.15"/><circle cx="200" cy="150" r="300" fill="%23e8926a" opacity="0.12"/><circle cx="900" cy="600" r="400" fill="%23c9a84c" opacity="0.1"/><circle cx="600" cy="400" r="250" fill="%237a8b5c" opacity="0.08"/></svg>');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 4px);
+    pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 800px; }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 100px;
+    padding: 0.4rem 1.4rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero-subtitle {
+    font-size: 1.15rem;
+    font-weight: 300;
+    opacity: 0.85;
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+    letter-spacing: 0.02em;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 100px;
+    padding: 0.55rem 1.3rem;
+    font-size: 0.9rem;
+  }
+  .hero-meta-item .icon { font-size: 1.2rem; }
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s ease-in-out infinite;
+  }
+  .hero-scroll span {
+    display: block;
+    width: 28px;
+    height: 48px;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 100px;
+    position: relative;
+  }
+  .hero-scroll span::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 10px;
+    background: #fff;
+    border-radius: 100px;
+    animation: scroll-dot 2s ease-in-out infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+  @keyframes scroll-dot {
+    0%, 100% { opacity: 1; top: 8px; }
+    50% { opacity: 0.3; top: 24px; }
+  }
+
+  /* ── Route Bar ── */
+  .route-bar {
+    background: var(--ink);
+    color: #fff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--gold);
+  }
+  .route-dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .route-arrow { color: var(--gold-light); font-size: 1.1rem; }
+  .route-date { color: var(--gold-light); font-weight: 600; }
+
+  /* ── Section ── */
+  .section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+  }
+  .section-sub {
+    text-align: center;
+    color: var(--ink-light);
+    margin-bottom: 3rem;
+    font-size: 1.05rem;
+  }
+
+  /* ── Overview Cards ── */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+  .overview-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .overview-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-hover);
+  }
+  .overview-icon {
+    width: 56px; height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.6rem;
+  }
+  .overview-icon.flight { background: var(--sky-dark); }
+  .overview-icon.train { background: var(--olive); }
+  .overview-icon.sun { background: var(--terracotta); }
+  .overview-icon.food { background: var(--roman-red); }
+  .overview-icon.art { background: var(--gold); }
+  .overview-card h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-light); margin-bottom: 0.35rem; }
+  .overview-card .big { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--ink); }
+
+  /* ── Timeline ── */
+  .timeline { position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--terracotta), var(--gold), var(--olive), var(--sky-dark));
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  .day-block {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3.5rem;
+    position: relative;
+  }
+  .day-block:nth-child(odd) { flex-direction: row; }
+  .day-block:nth-child(even) { flex-direction: row-reverse; }
+
+  .day-marker {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--terracotta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--terracotta);
+    z-index: 2;
+    box-shadow: 0 0 0 8px var(--cream);
+  }
+  .day-block:nth-child(even) .day-marker { border-color: var(--gold); color: var(--gold); }
+  .day-block:nth-child(3) .day-marker { border-color: var(--olive); color: var(--olive); }
+  .day-block:nth-child(5) .day-marker { border-color: var(--sky-dark); color: var(--sky-dark); }
+
+  .day-spacer { flex: 0 0 50%; }
+  .day-card-outer { flex: 0 0 50%; padding: 0 2.5rem; }
+
+  .day-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .day-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-hover);
+  }
+  .day-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--parchment);
+  }
+  .day-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--terracotta);
+    line-height: 1;
+  }
+  .day-meta .day-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--terracotta); font-weight: 600; }
+  .day-meta .day-date { font-size: 0.9rem; color: var(--ink-light); }
+  .day-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.01em;
+  }
+  .day-card .emoji-bullet { margin-right: 0.4rem; }
+
+  .time-tag {
+    display: inline-block;
+    background: var(--parchment);
+    border-radius: 8px;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--ink-light);
+    margin: 0.15rem 0.25rem 0.15rem 0;
+    letter-spacing: 0.03em;
+  }
+  .highlight-box {
+    background: linear-gradient(135deg, #fef9f0, #fdf3e1);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 12px 12px 0;
+    padding: 1rem 1.2rem;
+    margin-top: 1rem;
+    font-size: 0.88rem;
+  }
+  .highlight-box.tip { border-left-color: var(--olive); background: linear-gradient(135deg, #f5f8f0, #eef3e6); }
+  .highlight-box.warn { border-left-color: var(--terracotta); background: linear-gradient(135deg, #fef5f3, #fcede8); }
+
+  /* ── Map Section ── */
+  .map-section { background: var(--ink); color: #fff; padding: 5rem 2rem; text-align: center; }
+  .map-section .section-title { color: #fff; }
+  .map-visual {
+    max-width: 700px;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .map-city {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    min-width: 140px;
+  }
+  .map-city .city-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .map-city .city-name { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 600; }
+  .map-city .city-sub { font-size: 0.8rem; opacity: 0.6; }
+  .map-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gold-light);
+  }
+  .map-line .plane { font-size: 1.8rem; }
+  .map-line .dash { color: rgba(255,255,255,0.3); letter-spacing: 0.2em; }
+
+  /* ── Tips ── */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .tip-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+  .tip-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem; }
+  .tip-card p { font-size: 0.9rem; color: var(--ink-light); line-height: 1.6; }
+
+  /* ── Footer ── */
+  .footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 0.85rem;
+  }
+  .footer .quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .timeline::before { left: 2rem; }
+    .day-block, .day-block:nth-child(even) { flex-direction: column; }
+    .day-spacer { display: none; }
+    .day-card-outer { flex: 1; padding: 0 0 0 4rem; }
+    .day-marker { left: 2rem; }
+    .hero h1 { font-size: 2.5rem; }
+    .route-bar { font-size: 0.8rem; gap: 0.5rem; padding: 1rem; }
+  }
+
+  /* ── Entry animations ── */
+  .fade-up {
+    opacity: 0; transform: translateY(30px);
+    animation: fadeUp 0.7s ease-out forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.25s; }
+  .delay-3 { animation-delay: 0.4s; }
+  .delay-4 { animation-delay: 0.55s; }
+  .delay-5 { animation-delay: 0.7s; }
+  .delay-6 { animation-delay: 0.85s; }
+</style>
+</head>
+<body>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge fade-up">🇳🇱 荷兰 → 🇮🇹 意大利</div>
+    <h1 class="fade-up delay-1">奈梅亨 <em>to</em> 罗马</h1>
+    <p class="hero-subtitle fade-up delay-2">从低地之国的古老大学城，飞往永恒之城罗马，开启六天五晚的意式假期</p>
+    <div class="hero-meta fade-up delay-3">
+      <div class="hero-meta-item"><span class="icon">📅</span> 6月2日 – 6月7日</div>
+      <div class="hero-meta-item"><span class="icon">🌤️</span> 26°C 晴好</div>
+      <div class="hero-meta-item"><span class="icon">⏰</span> 5晚6天</div>
+    </div>
+  </div>
+  <div class="hero-scroll"><span></span></div>
+</section>
+
+<!-- ════ ROUTE BAR ════ -->
+<div class="route-bar">
+  <span class="route-dot"></span> 奈梅亨
+  <span class="route-arrow">→</span> 🚆 火车 1.5h
+  <span class="route-arrow">→</span> <span class="route-dot"></span> 阿姆斯特丹史基浦 (AMS)
+  <span class="route-arrow">→</span> ✈️ 飞行 2.5h
+  <span class="route-arrow">→</span> <span class="route-dot"></span> 罗马菲乌米奇诺 (FCO)
+  <span class="route-date">6.2 – 6.7</span>
+</div>
+
+<!-- ════ OVERVIEW ════ -->
+<section class="section">
+  <h2 class="section-title fade-up">行程概览</h2>
+  <p class="section-sub fade-up delay-1">六天五晚，从尼德兰到亚平宁，一场穿越两千年文明的旅程</p>
+  <div class="overview-grid fade-up delay-2">
+    <div class="overview-card">
+      <div class="overview-icon train">🚆</div>
+      <h3>火车接驳</h3>
+      <div class="big">1.5h</div>
+      <small>奈梅亨 → 史基浦</small>
+    </div>
+    <div class="overview-card">
+      <div class="overview-icon flight">✈️</div>
+      <h3>飞行时间</h3>
+      <div class="big">2.5h</div>
+      <small>AMS → FCO</small>
+    </div>
+    <div class="overview-card">
+      <div class="overview-icon sun">☀️</div>
+      <h3>平均气温</h3>
+      <div class="big">26°C</div>
+      <small>六月·罗马</small>
+    </div>
+    <div class="overview-card">
+      <div class="overview-icon food">🍝</div>
+      <h3>推荐美食</h3>
+      <div class="big">4 种</div>
+      <small>Carbonara · Pizza · Gelato · Caffè</small>
+    </div>
+    <div class="overview-card">
+      <div class="overview-icon art">🏛️</div>
+      <h3>必看景点</h3>
+      <div class="big">12+</div>
+      <small>古罗马 · 梵蒂冈 · 巴洛克</small>
+    </div>
+  </div>
+</section>
+
+<!-- ════ DAY BY DAY ════ -->
+<section class="section" style="padding-top:0;">
+  <h2 class="section-title fade-up">每日行程</h2>
+  <p class="section-sub fade-up delay-1">逐日详细安排，点击每一天展开你的罗马假期</p>
+
+  <div class="timeline">
+
+    <!-- DAY 1 -->
+    <div class="day-block fade-up delay-2">
+      <div class="day-marker">1</div>
+      <div class="day-spacer"></div>
+      <div class="day-card-outer">
+        <div class="day-card">
+          <div class="day-header">
+            <div class="day-num">01</div>
+            <div class="day-meta">
+              <div class="day-label">出发日</div>
+              <div class="day-date">6月2日 星期一</div>
+            </div>
+          </div>
+          <h3>🚆 奈梅亨 → 阿姆斯特丹 → 罗马</h3>
+          <p><span class="time-tag">08:30</span> 奈梅亨中央站出发，乘 NS Intercity 直达史基浦机场</p>
+          <p><span class="time-tag">10:00</span> 抵达 <strong>阿姆斯特丹史基浦机场 (AMS)</strong>，办理登机</p>
+          <p><span class="time-tag">12:15</span> ✈️ 航班起飞，飞越阿尔卑斯山脉</p>
+          <p><span class="time-tag">14:45</span> 抵达 <strong>罗马菲乌米奇诺机场 (FCO)</strong></p>
+          <p><span class="time-tag">15:30</span> Leonardo Express 快线 → 罗马 Termini 中央车站（32分钟）</p>
+          <p><span class="time-tag">16:30</span> 🏨 入住酒店，推荐区域：<strong>Trastevere / Monti / 西班牙广场</strong></p>
+          <p><span class="time-tag">18:30</span> 🍷 傍晚漫步<strong>特拉斯提弗列 (Trastevere)</strong>，在鹅卵石小巷中的露天餐厅享用欢迎晚餐</p>
+          <div class="highlight-box">
+            💡 <strong>推荐</strong>：Da Enzo al 29 是 Trastevere 的人气小馆，Carbonara 和 Cacio e Pepe 是必点
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day-block fade-up delay-3">
+      <div class="day-marker">2</div>
+      <div class="day-spacer"></div>
+      <div class="day-card-outer">
+        <div class="day-card">
+          <div class="day-header">
+            <div class="day-num">02</div>
+            <div class="day-meta">
+              <div class="day-label">古罗马之日</div>
+              <div class="day-date">6月3日 星期二</div>
+            </div>
+          </div>
+          <h3>🏛️ 斗兽场 · 古罗马广场 · 帕拉蒂尼山</h3>
+          <p><span class="time-tag">08:00</span> ☕ 意式早餐：Cornetto + Cappuccino（站着喝更地道）</p>
+          <p><span class="time-tag">08:45</span> 🏟️ <strong>罗马斗兽场 (Colosseo)</strong> —— 提前网上购票，走地下层+顶层全景通道</p>
+          <p><span class="time-tag">11:00</span> 🏛️ <strong>古罗马广场 (Foro Romano)</strong> —— 凯撒神庙、元老院、维斯太神庙</p>
+          <p><span class="time-tag">12:30</span> 🌿 <strong>帕拉蒂尼山 (Palatino)</strong> —— 罗马建城之地，俯瞰 Circus Maximus</p>
+          <p><span class="time-tag">13:30</span> 🍕 午餐：Pizzeria Luzzi（斗兽场附近，价廉物美）</p>
+          <p><span class="time-tag">15:00</span> 🏛️ <strong>卡比托利欧博物馆 (Musei Capitolini)</strong> —— 马可·奥勒留骑马像、母狼青铜像</p>
+          <p><span class="time-tag">17:30</span> 👀 <strong>从阿拉科埃利阶梯</strong>俯瞰罗马老城全景</p>
+          <p><span class="time-tag">19:30</span> 🥂 晚餐：Monti 区的小馆子，推荐 La Taverna dei Fori Imperiali</p>
+          <div class="highlight-box tip">
+            🎫 <strong>提前买票！</strong>斗兽场 FULL EXPERIENCE 票 €24，官网提前30天放票，抢得很快。或者买 Roma Pass 72h
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day-block fade-up delay-4">
+      <div class="day-marker">3</div>
+      <div class="day-spacer"></div>
+      <div class="day-card-outer">
+        <div class="day-card">
+          <div class="day-header">
+            <div class="day-num">03</div>
+            <div class="day-meta">
+              <div class="day-label">梵蒂冈 & 巴洛克</div>
+              <div class="day-date">6月4日 星期三</div>
+            </div>
+          </div>
+          <h3>⛪ 梵蒂冈博物馆 · 圣彼得大教堂 · 纳沃纳广场</h3>
+          <p><span class="time-tag">07:30</span> 🎨 <strong>梵蒂冈博物馆 (Musei Vaticani)</strong> —— 早场入场（避开人潮），直奔西斯廷教堂</p>
+          <p><span class="time-tag">09:00</span> 🤫 <strong>西斯廷教堂</strong> —— 米开朗基罗《创世纪》《最后的审判》</p>
+          <p><span class="time-tag">10:00</span> 🌀 <strong>拉斐尔房间</strong> —— 《雅典学院》</p>
+          <p><span class="time-tag">11:30</span> ⛪ <strong>圣彼得大教堂</strong> —— 登顶穹顶（551级台阶或电梯），360度俯瞰罗马</p>
+          <p><span class="time-tag">13:00</span> 🍝 午餐：Pizzarium Bonci（梵蒂冈附近最好的披萨切片）</p>
+          <p><span class="time-tag">14:30</span> 🏰 <strong>圣天使城堡 (Castel Sant'Angelo)</strong> —— 哈德良陵墓，圣天使桥</p>
+          <p><span class="time-tag">16:30</span> ⛲ <strong>纳沃纳广场 (Piazza Navona)</strong> —— 贝尼尼的四河喷泉</p>
+          <p><span class="time-tag">17:30</span> 🏛️ <strong>万神殿 (Pantheon)</strong> —— 两千年的穹顶奇迹</p>
+          <p><span class="time-tag">18:30</span> ⛲ <strong>特雷维喷泉 (Fontana di Trevi)</strong> —— 投三枚硬币许愿</p>
+          <p><span class="time-tag">20:00</span> 🍷 晚餐：Campo de' Fiori 附近</p>
+          <div class="highlight-box">
+            ⚠️ <strong>注意</strong>：梵蒂冈有严格着装要求——膝盖和肩膀必须遮盖，否则不能进入圣彼得大教堂
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day-block fade-up delay-5">
+      <div class="day-marker">4</div>
+      <div class="day-spacer"></div>
+      <div class="day-card-outer">
+        <div class="day-card">
+          <div class="day-header">
+            <div class="day-num">04</div>
+            <div class="day-meta">
+              <div class="day-label">艺术与花园</div>
+              <div class="day-date">6月5日 星期四</div>
+            </div>
+          </div>
+          <h3>🎨 博尔盖塞美术馆 · 西班牙广场 · 人民广场</h3>
+          <p><span class="time-tag">09:00</span> 🌳 <strong>博尔盖塞美术馆 (Galleria Borghese)</strong> —— 贝尼尼的《阿波罗与达芙妮》、卡拉瓦乔名作（⚠️ 必须提前预约，每2小时一场）</p>
+          <p><span class="time-tag">11:00</span> 🌿 <strong>博尔盖塞花园</strong>散步——罗马最美的城市公园</p>
+          <p><span class="time-tag">12:30</span> 🛍️ <strong>西班牙广场 (Piazza di Spagna)</strong> —— 西班牙阶梯，赫本同款打卡</p>
+          <p><span class="time-tag">13:00</span> 🛍️ <strong>Via dei Condotti</strong> 逛街 —— 罗马最奢华的购物街</p>
+          <p><span class="time-tag">14:00</span> 🍽️ 午餐：Pastificio Guerra（西班牙广场附近，€4 手工意面）</p>
+          <p><span class="time-tag">15:30</span> ⛪ <strong>人民广场 (Piazza del Popolo)</strong> —— 从平乔山 (Pincio) 露台看日落</p>
+          <p><span class="time-tag">17:30</span> 🍦 <strong>Giolitti</strong> —— 罗马最古老的冰淇淋店（始于1890年）</p>
+          <p><span class="time-tag">19:30</span> 🍷 晚餐：在 Trastevere 找一家有现场音乐的餐厅</p>
+          <div class="highlight-box tip">
+            🎫 <strong>博尔盖塞必须预约！</strong>官网提前预订，每场限2小时、限180人。不预约绝对进不去
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="day-block fade-up delay-6">
+      <div class="day-marker">5</div>
+      <div class="day-spacer"></div>
+      <div class="day-card-outer">
+        <div class="day-card">
+          <div class="day-header">
+            <div class="day-num">05</div>
+            <div class="day-meta">
+              <div class="day-label">探索日</div>
+              <div class="day-date">6月6日 星期五</div>
+            </div>
+          </div>
+          <h3>🌿 选择你的冒险：蒂沃利 / 地下罗马 / 阿皮亚古道</h3>
+
+          <p style="font-weight:600;margin-bottom:0.4rem;">📍 方案 A：蒂沃利一日游（推荐）</p>
+          <p><span class="time-tag">08:30</span> 火车前往 Tivoli（约1小时）</p>
+          <p><span class="time-tag">09:30</span> 🌊 <strong>埃斯特别墅 (Villa d'Este)</strong> —— 文艺复兴喷泉花园，500座喷泉</p>
+          <p><span class="time-tag">12:30</span> 🏛️ <strong>哈德良别墅 (Villa Adriana)</strong> —— 罗马皇帝的行宫遗址</p>
+
+          <p style="font-weight:600;margin-bottom:0.4rem;margin-top:0.8rem;">📍 方案 B：罗马深度探索</p>
+          <p><span class="time-tag">09:00</span> 🕳️ <strong>罗马地下墓穴 (Catacombe di San Callisto)</strong> —— 早期基督教地下墓地</p>
+          <p><span class="time-tag">11:00</span> 🛤️ <strong>阿皮亚古道 (Via Appia Antica)</strong> —— 租自行车骑行古罗马大道</p>
+          <p><span class="time-tag">15:00</span> 🏛️ 卡拉卡拉浴场 (Terme di Caracalla)</p>
+
+          <div class="highlight-box">
+            🍷 <strong>告别晚餐推荐</strong>：Roscioli（需要提前预订），罗马最好的餐厅之一，地窖用餐体验绝佳
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 6 -->
+    <div class="day-block fade-up delay-6">
+      <div class="day-marker">6</div>
+      <div class="day-spacer"></div>
+      <div class="day-card-outer">
+        <div class="day-card">
+          <div class="day-header">
+            <div class="day-num">06</div>
+            <div class="day-meta">
+              <div class="day-label">返程日</div>
+              <div class="day-date">6月7日 星期六</div>
+            </div>
+          </div>
+          <h3>🛫 告别罗马 · 飞回荷兰</h3>
+          <p><span class="time-tag">08:30</span> ☕ 最后的意式早餐，再吃一个 Cornetto</p>
+          <p><span class="time-tag">09:30</span> 🛍️ 最后的购物：Campo de' Fiori 早市（鲜榨石榴汁、橄榄油手信）</p>
+          <p><span class="time-tag">11:00</span> 🏛️ 如果时间充裕，路过看一眼<strong>真理之口 (Bocca della Verità)</strong></p>
+          <p><span class="time-tag">12:00</span> 🍝 最后一顿意面午餐</p>
+          <p><span class="time-tag">13:30</span> 🚄 <strong>Termini → Fiumicino</strong>，Leonardo Express 快线</p>
+          <p><span class="time-tag">14:15</span> 抵达 FCO 机场，办理登机 & 退税</p>
+          <p><span class="time-tag">16:00</span> ✈️ 航班起飞，再见永恒之城！</p>
+          <p><span class="time-tag">18:45</span> 抵达阿姆斯特丹史基浦</p>
+          <p><span class="time-tag">20:15</span> 🚆 火车返回奈梅亨，旅程结束 🇳🇱</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════ MAP VISUAL ════ -->
+<section class="map-section">
+  <h2 class="section-title">路线示意</h2>
+  <p style="opacity:0.6;margin-bottom:2rem;">穿越阿尔卑斯山，从北海之滨到地中海之心</p>
+  <div class="map-visual">
+    <div class="map-city">
+      <div class="city-icon">🌷</div>
+      <div class="city-name">奈梅亨</div>
+      <div class="city-sub">Nijmegen · 荷兰</div>
+    </div>
+    <div class="map-line">
+      <span class="dash">—</span> 🚆 <span class="dash">—</span>
+    </div>
+    <div class="map-city">
+      <div class="city-icon">✈️</div>
+      <div class="city-name">史基浦</div>
+      <div class="city-sub">AMS · 阿姆斯特丹</div>
+    </div>
+    <div class="map-line">
+      <span class="plane">✈️</span>
+    </div>
+    <div class="map-city">
+      <div class="city-icon">🏛️</div>
+      <div class="city-name">罗马</div>
+      <div class="city-sub">FCO · 意大利</div>
+    </div>
+  </div>
+  <p style="opacity:0.4;font-size:0.85rem;">全程约 1,650 km · 火车 + 飞行</p>
+</section>
+
+<!-- ════ TIPS ════ -->
+<section class="section">
+  <h2 class="section-title fade-up">实用贴士</h2>
+  <p class="section-sub fade-up delay-1">让旅程更顺滑的罗马生存指南</p>
+  <div class="tips-grid fade-up delay-2">
+    <div class="tip-card">
+      <h3>🚆 火车票</h3>
+      <p>奈梅亨→史基浦：NS app 或 ov-chipkaart 刷卡。罗马 Leonardo Express：€14，车站机器买即可，不要买成普通慢车。</p>
+    </div>
+    <div class="tip-card">
+      <h3>🎫 景点门票</h3>
+      <p>斗兽场、博尔盖塞美术馆、梵蒂冈博物馆<strong>必须提前预约</strong>！旺季票很快抢完。建议 Roma Pass 72h（€52），含2个免费景点+交通。</p>
+    </div>
+    <div class="tip-card">
+      <h3>💶 现金</h3>
+      <p>罗马大部分地方可刷卡，但小摊、街头咖啡可能需要现金。随身带 €50-100 现金，Termini 车站有 ATM。</p>
+    </div>
+    <div class="tip-card">
+      <h3>🚰 饮水</h3>
+      <p>罗马有 2,500+ 个公共饮水喷泉 (Nasoni)，水可以直接喝而且冰凉！带个空水瓶随时接。</p>
+    </div>
+    <div class="tip-card">
+      <h3>👗 着装</h3>
+      <p>教堂需要遮盖膝盖和肩膀。六月罗马热，但带一条薄披肩可以随时遮一下进教堂。</p>
+    </div>
+    <div class="tip-card">
+      <h3>📱 App</h3>
+      <p>Google Maps（导航）、Freenow（打车）、The Fork（餐厅预订）、Vatican Museums（官方App）、Trenitalia（火车）</p>
+    </div>
+    <div class="tip-card">
+      <h3>🍝 点餐</h3>
+      <p>意面是 Primo（第一道），肉/鱼是 Secondo（第二道），分开点。不要点拿铁——11点后意大利人不喝牛奶咖啡，要 Cappuccino 请早。</p>
+    </div>
+    <div class="tip-card">
+      <h3>⚠️ 安全</h3>
+      <p>注意小偷，尤其是在地铁、公交和特雷维喷泉等拥挤景点。背包背前面，手机不要放裤子后袋。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer class="footer">
+  <p class="quote">"A Roma, non basta una vita." —— 在罗马，一生都不够</p>
+  <p>🇳🇱 Nijmegen → 🇮🇹 Roma · 6.2 – 6.7 · Buon Viaggio! 🛫</p>
+</footer>
+
+</body>
+</html>
