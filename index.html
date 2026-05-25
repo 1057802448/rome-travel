@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🧠 ESCAN 2026 罗马 · 出行全攻略</title>
-<meta property="og:title" content="🧠 ESCAN 2026 罗马 · 出行全攻略">
-<meta property="og:description" content="ESCAN 2026 第8届欧洲认知与情感神经科学大会，6月2-7日罗马全攻略：机场交通、酒店到会场、附近美食超市">
+<title>🧠 小琳琳的罗马出行攻略 · ESCAN 2026</title>
+<meta property="og:title" content="🧠 小琳琳的罗马出行攻略 · ESCAN 2026">
+<meta property="og:description" content="6月2-7日，奈梅亨→罗马。ESCAN 2026 第8届欧洲认知与情感神经科学大会全攻略：机场交通、酒店到会场、附近美食超市">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary_large_image">
@@ -314,6 +314,38 @@
   }
   .toast.show { opacity: 1; }
 
+  /* ── Countdown ── */
+  .countdown-bar {
+    display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
+    margin: 2rem 0 3rem;
+  }
+  .countdown-item {
+    background: var(--white); border-radius: 20px; padding: 1.5rem 2rem;
+    text-align: center; box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.04);
+    min-width: 180px;
+  }
+  .countdown-item .cd-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-light); margin-bottom: 0.5rem; }
+  .countdown-item .cd-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; color: var(--primary); line-height: 1.1; }
+  .countdown-item .cd-sub { font-size: 0.78rem; color: var(--ink-light); }
+  .countdown-item .cd-icon { font-size: 1.8rem; margin-bottom: 0.3rem; }
+
+  /* ── Weather ── */
+  .weather-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.8rem; margin-bottom: 3rem;
+  }
+  .weather-card {
+    background: var(--white); border-radius: 16px; padding: 1.2rem 0.8rem;
+    text-align: center; box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+  .weather-card .w-day { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-light); margin-bottom: 0.3rem; }
+  .weather-card .w-icon { font-size: 2.2rem; margin: 0.3rem 0; }
+  .weather-card .w-temp { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--ink); }
+  .weather-card .w-lo { font-size: 0.78rem; color: var(--ink-light); }
+  .weather-card.highlight { border: 2px solid var(--accent); background: linear-gradient(180deg, #fefdf7, #fff); }
+
   /* ── Quick Nav Chips ── */
   .quick-nav {
     display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-bottom: 2rem;
@@ -443,9 +475,9 @@
 
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge fade-up">🧠 8th Biennial Conference</div>
-    <h1 class="fade-up delay-1">ESCAN <span>2026</span> 罗马</h1>
-    <p class="hero-subtitle fade-up delay-2">第8届欧洲认知与情感神经科学大会<br>奈梅亨 → 罗马 · 出行全攻略</p>
+    <div class="hero-badge fade-up">🧠 8th Biennial Conference · ESCAN 2026</div>
+    <h1 class="fade-up delay-1">小琳琳的<span>罗马出行攻略</span></h1>
+    <p class="hero-subtitle fade-up delay-2">第8届欧洲认知与情感神经科学大会<br>奈梅亨 → 罗马 · 6.2 – 6.7</p>
     <div class="hero-meta fade-up delay-3">
       <div class="hero-meta-item"><span class="icon">📅</span> 6月3日 – 6日 会议</div>
       <div class="hero-meta-item"><span class="icon">🏛️</span> Sapienza 大学经济学院</div>
@@ -512,6 +544,59 @@
       <h3>附近餐厅</h3>
       <div class="big">6+ 家</div>
       <small>€5-25 学生区物价</small>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding:2rem 2rem 0;">
+  <h2 class="section-title fade-up">⏳ 倒计时 & 天气</h2>
+
+  <div class="countdown-bar fade-up delay-2" id="countdown">
+    <div class="countdown-item">
+      <div class="cd-icon">✈️</div>
+      <div class="cd-label">距出发</div>
+      <div class="cd-num" id="cd-depart">--</div>
+      <div class="cd-sub">6月2日 · AMS → FCO</div>
+    </div>
+    <div class="countdown-item">
+      <div class="cd-icon">🧠</div>
+      <div class="cd-label">距会议开幕</div>
+      <div class="cd-num" id="cd-conf">--</div>
+      <div class="cd-sub">6月3日 · ESCAN Day 1</div>
+    </div>
+    <div class="countdown-item">
+      <div class="cd-icon">🏨</div>
+      <div class="cd-label">入住酒店</div>
+      <div class="cd-num" id="cd-rome">--</div>
+      <div class="cd-sub">6月2日 · Hotel Laurentia</div>
+    </div>
+  </div>
+
+  <p class="section-sub fade-up delay-1" style="margin-bottom:1.5rem;">罗马 6月初 天气（历史均值 · 仅供参考）</p>
+  <div class="weather-grid fade-up delay-2">
+    <div class="weather-card">
+      <div class="w-day">6.2 周一</div><div class="w-icon">☀️</div>
+      <div class="w-temp">26°</div><div class="w-lo">15° 晴</div>
+    </div>
+    <div class="weather-card highlight">
+      <div class="w-day">6.3 周二</div><div class="w-icon">☀️</div>
+      <div class="w-temp">27°</div><div class="w-lo">16° 晴</div>
+    </div>
+    <div class="weather-card">
+      <div class="w-day">6.4 周三</div><div class="w-icon">⛅</div>
+      <div class="w-temp">27°</div><div class="w-lo">16° 多云</div>
+    </div>
+    <div class="weather-card">
+      <div class="w-day">6.5 周四</div><div class="w-icon">☀️</div>
+      <div class="w-temp">28°</div><div class="w-lo">17° 晴</div>
+    </div>
+    <div class="weather-card">
+      <div class="w-day">6.6 周五</div><div class="w-icon">⛅</div>
+      <div class="w-temp">28°</div><div class="w-lo">17° 多云</div>
+    </div>
+    <div class="weather-card">
+      <div class="w-day">6.7 周六</div><div class="w-icon">☀️</div>
+      <div class="w-temp">27°</div><div class="w-lo">16° 晴</div>
     </div>
   </div>
 </section>
@@ -1042,6 +1127,24 @@
 <div class="toast" id="toast"></div>
 
 <script>
+(function() {
+  var depart = new Date('2026-06-02T06:00:00+02:00');
+  var conf   = new Date('2026-06-03T08:30:00+02:00');
+  function tick() {
+    var now = new Date();
+    var d = Math.ceil((depart - now) / 864e5);
+    var c = Math.ceil((conf - now) / 864e5);
+    var elD = document.getElementById('cd-depart');
+    var elC = document.getElementById('cd-conf');
+    var elR = document.getElementById('cd-rome');
+    if (elD) elD.textContent = d > 0 ? d + ' 天' : (d === 0 ? '今天!' : '已出发');
+    if (elC) elC.textContent = c > 0 ? c + ' 天' : (c === 0 ? '今天!' : '进行中');
+    if (elR) elR.textContent = d > 0 ? d + ' 天' : (d === 0 ? '今天!' : '已入住');
+  }
+  tick();
+  setInterval(tick, 60000);
+})();
+
 const btt = document.getElementById('backToTop');
 window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 600));
 btt.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
