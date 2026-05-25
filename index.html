@@ -169,28 +169,11 @@
 
   /* ── Timeline ── */
   .timeline { position: relative; }
-  .timeline::before {
-    content: ''; position: absolute;
-    left: 50%; top: 0; bottom: 0; width: 2px;
-    background: linear-gradient(to bottom, var(--primary-light), var(--teal), var(--accent), var(--primary-light));
-    transform: translateX(-50%); border-radius: 2px;
-  }
-  .day-block { display: flex; align-items: flex-start; margin-bottom: 3rem; position: relative; }
-  .day-block:nth-child(odd) { flex-direction: row; }
-  .day-block:nth-child(even) { flex-direction: row-reverse; }
-  .day-marker {
-    position: absolute; left: 50%; top: 0; transform: translateX(-50%);
-    width: 42px; height: 42px; border-radius: 50%;
-    background: var(--white); border: 3px solid var(--primary-light);
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 0.82rem; color: var(--primary);
-    z-index: 2; box-shadow: 0 0 0 8px var(--cream);
-  }
-  .day-block:nth-child(2) .day-marker, .day-block:nth-child(3) .day-marker { border-color: var(--teal); color: var(--teal); }
-  .day-block:nth-child(4) .day-marker, .day-block:nth-child(5) .day-marker { border-color: var(--accent); color: #8a6d20; }
-  .day-block:nth-child(6) .day-marker { border-color: var(--roman-red); color: var(--roman-red); }
-  .day-spacer { flex: 0 0 50%; }
-  .day-card-outer { flex: 0 0 50%; padding: 0 2.5rem; }
+  .timeline::before { display: none; }
+  .day-block { display: block; margin-bottom: 2rem; }
+  .day-marker { display: none; }
+  .day-spacer { display: none; }
+  .day-card-outer { max-width: 100%; padding: 0; }
   .day-card {
     background: var(--white); border-radius: 20px; padding: 2rem;
     box-shadow: var(--card-shadow); border: 1px solid rgba(0,0,0,0.04);
@@ -371,11 +354,8 @@
   .card-toggle { display: none; }
   @media (max-width: 768px) {
     /* ── Mobile layout ── */
-    .timeline::before { left: 1.8rem; }
-    .day-block, .day-block:nth-child(even) { flex-direction: column; }
-    .day-spacer { display: none; }
-    .day-card-outer { flex: 1; padding: 0 0 0 3.8rem; }
-    .day-marker { left: 1.8rem; width: 36px; height: 36px; font-size: 0.72rem; box-shadow: 0 0 0 6px var(--cream); }
+    .day-block { display: block; }
+    .day-card-outer { max-width: 100%; padding: 0; }
 
     /* ── Mobile typography ── */
     body { font-size: 15px; }
