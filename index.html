@@ -265,19 +265,20 @@
   .tip-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem; }
   .tip-card p { font-size: 0.88rem; color: var(--ink-light); line-height: 1.6; }
 
-  /* ── Interactive Buttons ── */
-  .btn-maps {
-    display: inline-flex; align-items: center; gap: 0.4rem;
+  /* ── Unified Nav Buttons ── */
+  .btn-nav {
+    display: inline-flex; align-items: center; gap: 0.35rem;
     background: #fff; color: var(--primary);
-    border: 2px solid var(--primary-light);
-    border-radius: 100px; padding: 0.5rem 1.2rem;
-    font-size: 0.82rem; font-weight: 600;
-    cursor: pointer; text-decoration: none;
-    transition: all 0.25s;
-    margin: 0.3rem 0.3rem 0.3rem 0;
+    border: 1.5px solid rgba(26,58,92,0.2);
+    border-radius: 8px; padding: 0.4rem 0.85rem;
+    font-size: 0.78rem; font-weight: 600;
+    cursor: pointer; text-decoration: none; font-family: 'Inter', sans-serif;
+    transition: all 0.2s; margin: 0.2rem 0.25rem 0.2rem 0;
+    white-space: nowrap;
   }
-  .btn-maps:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
-  .btn-maps.small { font-size: 0.72rem; padding: 0.3rem 0.8rem; }
+  .btn-nav:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .btn-nav.fill { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .btn-nav.fill:hover { background: var(--primary-light); }
   .btn-copy {
     display: inline-flex; align-items: center; gap: 0.3rem;
     background: var(--parchment); color: var(--ink-light);
@@ -318,11 +319,12 @@
     display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-bottom: 2rem;
   }
   .quick-nav a {
-    display: inline-flex; align-items: center; gap: 0.3rem;
-    background: var(--white); border: 1px solid rgba(0,0,0,0.08);
-    border-radius: 100px; padding: 0.45rem 1rem;
-    font-size: 0.8rem; font-weight: 500; color: var(--ink-light);
-    text-decoration: none; transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    background: #fff; color: var(--primary);
+    border: 1.5px solid rgba(26,58,92,0.2);
+    border-radius: 8px; padding: 0.4rem 0.85rem;
+    font-size: 0.78rem; font-weight: 600; font-family: 'Inter', sans-serif;
+    text-decoration: none; transition: all 0.2s; white-space: nowrap;
   }
   .quick-nav a:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
 
@@ -423,8 +425,9 @@
     .walking-step .step-text { font-size: 0.72rem; }
     .walking-arrow { font-size: 1.1rem; }
     .info-table td { padding: 0.7rem 0.8rem; font-size: 0.8rem; }
-    .quick-nav { gap: 0.4rem; }
+    .quick-nav { gap: 0.35rem; }
     .quick-nav a { font-size: 0.72rem; padding: 0.35rem 0.7rem; }
+    .btn-nav { font-size: 0.72rem; padding: 0.35rem 0.7rem; }
     .back-to-top { bottom: 1.5rem; right: 1rem; width: 40px; height: 40px; font-size: 1.1rem; }
     .footer { padding: 2rem 1rem; font-size: 0.75rem; }
   }
@@ -559,7 +562,7 @@
           <p><span class="time-tag">14:05</span> 🏨 <strong>入住 Hotel Laurentia</strong> · Largo Degli Osci 63</p>
           <p><span class="time-tag">15:00</span> 🛒 去附近 Todis 超市（步行 5 分钟）采购矿泉水、零食、早餐食材</p>
           <p><span class="time-tag">16:00</span> 🚶 散步踩点：从酒店走到会场（10 分钟），熟悉路线，看看 Sapienza 校园
-            <br><a href="https://www.google.com/maps/dir/Hotel+Laurentia,+Largo+Degli+Osci+63,+00185+Roma,+Italy/Via+del+Castro+Laurenziano,+9,+00161+Roma+RM,+Italy" target="_blank" rel="noopener" class="btn-maps small">🗺️ 酒店 → 会场 步行导航</a></p>
+            <br><a href="https://www.google.com/maps/dir/Hotel+Laurentia,+Largo+Degli+Osci+63,+00185+Roma,+Italy/Via+del+Castro+Laurenziano,+9,+00161+Roma+RM,+Italy" target="_blank" rel="noopener" class="btn-nav">🗺️ 酒店 → 会场 步行导航</a></p>
           <p><span class="time-tag">18:00</span> 🍝 晚餐 · San Lorenzo 区觅食，推荐 Vox Populi 或 Pizzeria Formula 1</p>
           <p><span class="time-tag">20:00</span> 😴 早点休息，倒时差（荷兰比意大利早 2 小时可以忽略），准备明天的会议
 
@@ -653,8 +656,8 @@
           <p><span class="time-tag">16:00-17:30</span> 🧪 <strong>Poster Session II</strong> · 第二轮海报展示</p>
           <p><span class="time-tag">19:00/20:00</span> 🍷 <strong>ESCAN Conference Dinner</strong>（如有安排，通常需提前购票，€50-80）</p>
           <p><span class="time-tag">如无晚宴</span> 🏛️ 自由探索罗马 · <strong>地铁 B 线 Policlinico → Colosseo（2 站）</strong>
-            <br><a href="https://www.google.com/maps/dir/Policlinico+metro+Roma/Colosseo+Roma" target="_blank" rel="noopener" class="btn-maps small">🗺️ Policlinico 地铁站 → 斗兽场</a>
-            <a href="https://www.google.com/maps/dir/Hotel+Laurentia,+Largo+Degli+Osci+63,+00185+Roma,+Italy/Policlinico+metro+Roma" target="_blank" rel="noopener" class="btn-maps small">🗺️ 酒店 → Policlinico 地铁站</a></p>
+            <br><a href="https://www.google.com/maps/dir/Policlinico+metro+Roma/Colosseo+Roma" target="_blank" rel="noopener" class="btn-nav">🗺️ Policlinico 地铁站 → 斗兽场</a>
+            <a href="https://www.google.com/maps/dir/Hotel+Laurentia,+Largo+Degli+Osci+63,+00185+Roma,+Italy/Policlinico+metro+Roma" target="_blank" rel="noopener" class="btn-nav">🗺️ 酒店 → Policlinico 地铁站</a></p>
           </div>
           <button class="card-toggle" onclick="var b=this.previousElementSibling;b.classList.toggle('expanded');this.textContent=b.classList.contains('expanded')?'收起 ▲':'展开全部 ▼'">展开全部 ▼</button>
           <div class="highlight-box">
@@ -686,14 +689,14 @@
           <p><span class="time-tag">13:00</span> 🍝 午餐</p>
           <p><span class="time-tag">14:00-18:00</span> 🏛️ <strong>推荐路线 A：巴洛克罗马</strong>
             <br>地铁 B 线 → Colosseo 外观 → 步行 Via dei Fori Imperiali → 威尼斯广场 → 许愿池 → 西班牙广场 → 人民广场
-            <br><a href="https://www.google.com/maps/dir/Colosseo,+Roma/Piazza+Venezia+Roma/Fontana+di+Trevi+Roma/Piazza+di+Spagna+Roma/Piazza+del+Popolo+Roma" target="_blank" rel="noopener" class="btn-maps small">🗺️ 完整步行路线导航（5站）</a></p>
+            <br><a href="https://www.google.com/maps/dir/Colosseo,+Roma/Piazza+Venezia+Roma/Fontana+di+Trevi+Roma/Piazza+di+Spagna+Roma/Piazza+del+Popolo+Roma" target="_blank" rel="noopener" class="btn-nav">🗺️ 完整步行路线导航（5站）</a></p>
           <p><span class="time-tag">14:00-18:00</span> 🎨 <strong>推荐路线 B：艺术之旅</strong>
             <br>博尔盖塞美术馆（需提前预约！官网 galleriaborghese.it）→ 博尔盖塞花园散步 → Via Veneto</p>
           <p><span class="time-tag">18:00</span> 🍦 <strong>Giolitti</strong> 冰淇淋（Via degli Uffici del Vicario 40，万神殿附近 · 始于 1890 年）
-            <br><a href="https://www.google.com/maps/search/Giolitti+gelato+Via+degli+Uffici+del+Vicario+40+Roma" target="_blank" rel="noopener" class="btn-maps small">🗺️ 导航去 Giolitti</a></p>
+            <br><a href="https://www.google.com/maps/search/Giolitti+gelato+Via+degli+Uffici+del+Vicario+40+Roma" target="_blank" rel="noopener" class="btn-nav">🗺️ 导航去 Giolitti</a></p>
           <p><span class="time-tag">19:30</span> 🍷 <strong>告别晚餐</strong> · Trastevere 区（推荐：Da Enzo al 29 / Tonnarello / Nannarella）
             <br><small style="color:var(--ink-light);">从 Termini 坐 Bus H 或 8 号电车直达 Trastevere（约 15 分钟）
-            <br><a href="https://www.google.com/maps/search/ristorante+Trastevere+Roma" target="_blank" rel="noopener" class="btn-maps small">🗺️ Trastevere 餐厅区</a></small></p>
+            <br><a href="https://www.google.com/maps/search/ristorante+Trastevere+Roma" target="_blank" rel="noopener" class="btn-nav">🗺️ Trastevere 餐厅区</a></small></p>
           <p><span class="time-tag">22:00</span> 🏨 回酒店收拾行李，准备明天回程</p>
           <div class="highlight-box tip">
             🎫 <strong>博尔盖塞必须提前预约</strong>：galleriaborghese.it，每场限 2 小时 / 180 人。想去看现在就订！<br>
@@ -804,7 +807,7 @@
         <h4>Trattoria da Marcello <span style="font-size:0.75rem;color:var(--gold);">★ 4.5</span></h4>
         <p><span class="place-tag">€15-25</span><span class="place-tag">罗马传统菜</span><span class="place-tag">步行 6 分钟</span></p>
         <p>Carbonara 和 Cacio e Pepe 是招牌。家庭经营，地道罗马味。</p>
-        <a href="https://www.google.com/maps/search/Trattoria+da+Marcello+Via+dei+Campani+Roma" target="_blank" rel="noopener" class="btn-maps small">🗺️ 导航去</a>
+        <a href="https://www.google.com/maps/search/Trattoria+da+Marcello+Via+dei+Campani+Roma" target="_blank" rel="noopener" class="btn-nav">🗺️ 导航去</a>
       </div>
     </div>
 
@@ -814,7 +817,7 @@
         <h4>Vox Populi <span style="font-size:0.75rem;color:var(--gold);">★ 4.6</span></h4>
         <p><span class="place-tag">€5-10</span><span class="place-tag">Trapizzino</span><span class="place-tag">步行 4 分钟</span></p>
         <p>罗马披萨三明治，学生最爱。"Marco Aurelio" panino 必点，快捷午餐首选。</p>
-        <a href="https://www.google.com/maps/search/Vox+Populi+Via+dei+Volsci+Roma" target="_blank" rel="noopener" class="btn-maps small">🗺️ 导航去</a>
+        <a href="https://www.google.com/maps/search/Vox+Populi+Via+dei+Volsci+Roma" target="_blank" rel="noopener" class="btn-nav">🗺️ 导航去</a>
       </div>
     </div>
 
@@ -824,7 +827,7 @@
         <h4>Pizzeria Formula 1 <span style="font-size:0.75rem;color:var(--gold);">★ 4.3</span></h4>
         <p><span class="place-tag">€6-12</span><span class="place-tag">罗马薄底披萨</span><span class="place-tag">步行 7 分钟</span></p>
         <p>学生人气店，午市套餐披萨+饮料 €8。便宜又大份。</p>
-        <a href="https://www.google.com/maps/search/Pizzeria+Formula+1+Via+degli+Equi+Roma" target="_blank" rel="noopener" class="btn-maps small">🗺️ 导航去</a>
+        <a href="https://www.google.com/maps/search/Pizzeria+Formula+1+Via+degli+Equi+Roma" target="_blank" rel="noopener" class="btn-nav">🗺️ 导航去</a>
       </div>
     </div>
 
@@ -834,7 +837,7 @@
         <h4>Gelateria La Romana <span style="font-size:0.75rem;color:var(--gold);">★ 4.6</span></h4>
         <p><span class="place-tag">€3-5</span><span class="place-tag">手工冰淇淋</span><span class="place-tag">步行 10 分钟</span></p>
         <p>罗马最好冰淇淋之一。招牌 Crema dal 1947 必试，每天一个 Gelato！</p>
-        <a href="https://www.google.com/maps/search/Gelateria+La+Romana+Via+Tiburtina+Roma" target="_blank" rel="noopener" class="btn-maps small">🗺️ 导航去</a>
+        <a href="https://www.google.com/maps/search/Gelateria+La+Romana+Via+Tiburtina+Roma" target="_blank" rel="noopener" class="btn-nav">🗺️ 导航去</a>
       </div>
     </div>
 
@@ -844,7 +847,7 @@
         <h4>Said dal 1923 <span style="font-size:0.75rem;color:var(--gold);">★ 4.4</span></h4>
         <p><span class="place-tag">€12-20</span><span class="place-tag">Brunch · 巧克力工厂</span><span class="place-tag">步行 12 分钟</span></p>
         <p>百年巧克力工厂改造，环境绝美。Brunch 和晚餐都好，适合拍照。</p>
-        <a href="https://www.google.com/maps/search/Said+dal+1923+Via+Tiburtina+135+Roma" target="_blank" rel="noopener" class="btn-maps small">🗺️ 导航去</a>
+        <a href="https://www.google.com/maps/search/Said+dal+1923+Via+Tiburtina+135+Roma" target="_blank" rel="noopener" class="btn-nav">🗺️ 导航去</a>
       </div>
     </div>
 
@@ -854,7 +857,7 @@
         <h4>Carrefour Express</h4>
         <p><span class="place-tag">超市</span><span class="place-tag">步行 8 分钟</span><span class="place-tag">开到 21:00</span></p>
         <p>法国连锁便利店，水、零食、水果、日用品一应俱全。</p>
-        <a href="https://www.google.com/maps/search/Carrefour+Express+Via+dei+Marsi+Roma" target="_blank" rel="noopener" class="btn-maps small">🗺️ 导航去</a>
+        <a href="https://www.google.com/maps/search/Carrefour+Express+Via+dei+Marsi+Roma" target="_blank" rel="noopener" class="btn-nav">🗺️ 导航去</a>
       </div>
     </div>
 
@@ -864,7 +867,7 @@
         <h4>Todis 平价超市</h4>
         <p><span class="place-tag">超市</span><span class="place-tag">步行 5 分钟</span><span class="place-tag">大瓶水 €0.3</span></p>
         <p>意大利本土平价连锁，价格最低。买水、饼干、罐头最佳去处。</p>
-        <a href="https://www.google.com/maps/search/Todis+Via+dei+Volsci+Roma" target="_blank" rel="noopener" class="btn-maps small">🗺️ 导航去</a>
+        <a href="https://www.google.com/maps/search/Todis+Via+dei+Volsci+Roma" target="_blank" rel="noopener" class="btn-nav">🗺️ 导航去</a>
       </div>
     </div>
 
@@ -874,7 +877,7 @@
         <h4>Alimentari 小食店</h4>
         <p><span class="place-tag">杂货</span><span class="place-tag">步行 3 分钟</span><span class="place-tag">最新鲜</span></p>
         <p>意大利传统杂货铺，新鲜水果、奶酪、火腿、面包，当地人才知道。</p>
-        <a href="https://www.google.com/maps/search/Alimentari+Via+dei+Sabelli+Roma" target="_blank" rel="noopener" class="btn-maps small">🗺️ 导航去</a>
+        <a href="https://www.google.com/maps/search/Alimentari+Via+dei+Sabelli+Roma" target="_blank" rel="noopener" class="btn-nav">🗺️ 导航去</a>
       </div>
     </div>
 
