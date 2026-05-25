@@ -282,6 +282,67 @@
   .tip-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem; }
   .tip-card p { font-size: 0.88rem; color: var(--ink-light); line-height: 1.6; }
 
+  /* ── Interactive Buttons ── */
+  .btn-maps {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: #fff; color: var(--primary);
+    border: 2px solid var(--primary-light);
+    border-radius: 100px; padding: 0.5rem 1.2rem;
+    font-size: 0.82rem; font-weight: 600;
+    cursor: pointer; text-decoration: none;
+    transition: all 0.25s;
+    margin: 0.3rem 0.3rem 0.3rem 0;
+  }
+  .btn-maps:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .btn-maps.small { font-size: 0.72rem; padding: 0.3rem 0.8rem; }
+  .btn-copy {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: var(--parchment); color: var(--ink-light);
+    border: 1px solid rgba(0,0,0,0.1); border-radius: 100px;
+    padding: 0.3rem 0.8rem; font-size: 0.72rem; font-weight: 500;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .btn-copy:hover { background: var(--ink); color: #fff; }
+  .btn-copy.copied { background: var(--teal); color: #fff; border-color: var(--teal); }
+  .nav-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1.2rem; }
+
+  /* ── Back to Top ── */
+  .back-to-top {
+    position: fixed; bottom: 2rem; right: 2rem;
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--primary); color: #fff; border: none;
+    font-size: 1.3rem; cursor: pointer;
+    box-shadow: 0 4px 16px rgba(26,58,92,0.3);
+    opacity: 0; transform: translateY(20px);
+    transition: all 0.3s; pointer-events: none; z-index: 200;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .back-to-top:hover { background: var(--primary-light); transform: translateY(-3px); }
+
+  /* ── Toast ── */
+  .toast {
+    position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    background: var(--ink); color: #fff; padding: 0.7rem 1.5rem;
+    border-radius: 100px; font-size: 0.85rem; font-weight: 500;
+    z-index: 300; opacity: 0; transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .toast.show { opacity: 1; }
+
+  /* ── Quick Nav Chips ── */
+  .quick-nav {
+    display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-bottom: 2rem;
+  }
+  .quick-nav a {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: var(--white); border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 100px; padding: 0.45rem 1rem;
+    font-size: 0.8rem; font-weight: 500; color: var(--ink-light);
+    text-decoration: none; transition: all 0.2s;
+  }
+  .quick-nav a:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
   /* ── Footer ── */
   .footer {
     background: var(--primary); color: rgba(255,255,255,0.5);
@@ -361,11 +422,11 @@
       <div class="big">4 天</div>
       <small>6.3 – 6.6</small>
     </div>
-    <div class="overview-card">
+    <div class="overview-card" style="cursor:pointer" onclick="window.open('https://www.google.com/maps/dir/Hotel+Laurentia,+Largo+Degli+Osci+63,+00185+Roma,+Italy/Via+del+Castro+Laurenziano,+9,+00161+Roma+RM,+Italy','_blank')">
       <div class="overview-icon hotel">🏨</div>
-      <h3>酒店到会场</h3>
+      <h3>酒店到会场 🗺️</h3>
       <div class="big">10 min</div>
-      <small>步行 800m</small>
+      <small>步行 800m · 点此导航</small>
     </div>
     <div class="overview-card">
       <div class="overview-icon transport">🚂</div>
@@ -560,8 +621,17 @@
 </section>
 
 <section class="section" style="padding-top:0;">
-  <h2 class="section-title fade-up">🚶 酒店 ↔ 会场 步行路线</h2>
+  <h2 class="section-title fade-up">🗺️ 酒店 → 会场 · 导航 & 步行路线</h2>
   <p class="section-sub fade-up delay-1">两个位置都在 San Lorenzo 区，走路 10 分钟</p>
+
+  <div class="quick-nav fade-up delay-1">
+    <a href="#walk-detail">🚶 步行路线图</a>
+    <a href="https://www.google.com/maps/dir/Hotel+Laurentia,+Largo+Degli+Osci+63,+00185+Roma,+Italy/Via+del+Castro+Laurenziano,+9,+00161+Roma+RM,+Italy" target="_blank" rel="noopener">🗺️ 打开 Google Maps 导航</a>
+    <a href="https://www.google.com/maps/dir/Roma+Termini/Hotel+Laurentia,+Largo+Degli+Osci+63,+00185+Roma,+Italy" target="_blank" rel="noopener">🚂 Termini → 酒店</a>
+    <a href="#" onclick="copyAddr('Largo Degli Osci 63, 00185 Roma',this);return false">📋 复制酒店地址</a>
+    <a href="#" onclick="copyAddr('Via del Castro Laurenziano 9, 00161 Roma',this);return false">📋 复制会场地址</a>
+  </div>
+
   <div class="walking-diagram fade-up delay-2">
     <div class="walking-steps">
       <div class="walking-step">
@@ -589,7 +659,8 @@
       </div>
     </div>
     <p style="font-size:0.85rem;color:var(--ink-light);margin-top:1rem;">
-      📍 全程约 <strong>800 米 · 10 分钟</strong> · 从酒店出门左转 → 沿 Via dei Volsci 直走 → 在 Via dei Sardi 右转 → 走到坡顶即到会场
+      📍 全程约 <strong>800 米 · 10 分钟</strong><br>从酒店出门左转 → 沿 Via dei Volsci 直走 → 在 Via dei Sardi 右转 → 走到坡顶即到会场<br>
+    <a href="https://www.google.com/maps/dir/Hotel+Laurentia,+Largo+Degli+Osci+63,+00185+Roma,+Italy/Via+del+Castro+Laurenziano,+9,+00161+Roma+RM,+Italy" target="_blank" rel="noopener" class="btn-maps">🗺️ 在 Google Maps 中打开路线</a>
     </p>
   </div>
   <p style="text-align:center;font-size:0.88rem;color:var(--ink-light);margin-top:1.5rem;">
@@ -750,6 +821,35 @@
   <p class="quote">"The brain is wider than the sky." — Emily Dickinson</p>
   <p>🧠 ESCAN 2026 · Roma · 6.2 – 6.7 · Buon Viaggio!</p>
 </footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">⬆</button>
+<div class="toast" id="toast"></div>
+
+<script>
+const btt = document.getElementById('backToTop');
+window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 600));
+btt.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+function copyAddr(text, el) {
+  navigator.clipboard.writeText(text).then(() => {
+    el.classList.add('copied');
+    var label = text.includes('Osci') ? '酒店' : '会场';
+    el.textContent = '✅ 已复制';
+    showToast('📋 ' + label + '地址已复制到剪贴板');
+    setTimeout(() => { el.classList.remove('copied'); el.textContent = '📋 复制' + label + '地址'; }, 2000);
+  });
+}
+window.copyAddr = copyAddr;
+
+var toast = document.getElementById('toast');
+var toastTimer;
+function showToast(msg) {
+  clearTimeout(toastTimer);
+  toast.textContent = msg;
+  toast.classList.add('show');
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
+}
+</script>
 
 </body>
 </html>
